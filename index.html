@@ -1,0 +1,225 @@
+<html>
+	<head>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+		<style>
+  			@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
+
+			body {
+			font-family: 'Orbitron', sans-serif;
+			background: #000;
+			color: #fff;
+			background-image: url('https://www.transparenttextures.com/patterns/stardust.png'); /* Subtle starry texture */
+			}
+
+			.container {
+			margin: 0 auto;
+			padding: 60px 20%;
+			}
+
+			h1, h2 {
+			text-align: center;
+			color: #FFC107; /* Star Wars yellow */
+			text-shadow: 0 0 10px rgba(255, 193, 7, 0.7); /* Glow effect for Star Wars vibe */
+			}
+
+			a {
+			color: #00B7EB; /* Lightsaber blue for links */
+			text-decoration: none;
+			}
+
+			a:hover {
+			text-shadow: 0 0 5px #00B7EB; /* Blue glow on hover */
+			}
+
+			ul {
+			list-style-type: disc;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			}
+
+			ul ul {
+			margin-left: 20px;
+			list-style-type: circle;
+			}
+
+			li {
+			margin-top: 25px;
+			}
+
+			.section {
+			margin-top: 50px;
+			}
+
+			figure {
+			text-align: center;
+			}
+
+			img {
+			display: inline-block;
+			margin-top: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+		<h1>Galaxy Editor</h1>
+		<div style="text-align: center;">Work by: <a id="sultan" href="https://github.com/M7Tro">Sultan Jamalbekov</a>, <a href="https://github.com/borbsnorb">Ryan Trac</a>, <a href="https://github.com/AlexBennyy">Alex Benny</a>, <a href="https://github.com/rgonzy">Ruben Gonzalez</a></div>
+
+		<h2 class="section">Galaxy Editor</h2>
+		<ul>
+			<li>
+				We want to implement an interactive demo of a galaxy, generated procedurally from user input and rendered in real time with custom shaders.
+			</li>
+		</ul>
+
+		
+		<h2 class="section">Problem Description</h2>
+		<ul>
+			<li>
+				We want to enable a user to define a galaxy by drawing on a 2D canvas in the browser and get a real-time interactive render
+			</li>
+			<li>
+				Challenge 1: generate the a galaxy procedurally from user input 
+			</li>
+			<li>
+				Challenge 2: interactive render in real time using threeJS
+			</li>
+			<li>
+				Challenge 3: custom shader
+			</li>
+		</ul>
+
+		<h2 class="section">Goals and Deliverables</h2>
+		<ul>
+			<li>
+				The goal is to create a website with an "edit" mode that provides user with a 2D canvas to draw objects and various parameters that could define a galaxy: temperature, gases, density, etc.
+			</li>
+			<li>
+				Once the user is done, a "Run" button is pressed and an interactive render is created. The user can move the camera, pan the camera, zoom the camera.
+			</li>
+			<li>
+				Quality of procedural generation will be measured by the accurance and variance of renders. How well does the generated model capture user's input? How much difference is there between renders with differrent parameters?
+			</li>
+			<li>
+				Quality of real-time render is measure by speed/performance/smoothness. Approximated by FPS.
+			</li>
+			<li>
+				Quality of a custom shader can be subjective. We will consider: how beautiful it is, how well does it capture various parameters of the procedurally generated model.
+			</li>
+		</ul>
+
+
+		<h2 class="section">What questions do you plan to answer?</h2>
+		<ul>
+			<li>
+				Baseline plan: 2D graphical interface for a user that successfuly generates a galaxy and renders in real time
+			</li>
+			<li>
+				Hopeful plan:
+				<ul>
+					<li>
+						Implement the custom shader
+					</li>
+					<li>
+						Make the custom shader physically realistic
+					</li>
+					<li>
+						Allow selection between different artistic shaders 
+					</li>
+					<li>
+						Add more objecs with unique properties and more parameters to introduce more diversity to the possible procedural generation
+					</li>
+				</ul>
+			</li>
+		</ul>
+
+		<h2 class="section">Schedule</h2>
+		<ul>
+			<li>
+				Week 0: 20 - 27
+				<ul>
+					<li>
+						Decide on general topic/direction
+					</li>
+					<li>
+						Study code from inspiration projects. Decide the pipeline, datastructures, and tech stack used.
+					</li>
+					<li>
+						August 27: submit proposal and team signup on gradescope
+					</li>
+				</ul>
+			</li>
+			<li>
+				Week 1: 28 - 3
+				<ul>
+					In parallel:
+					<li>
+						Two people implement the user interface and procedural generation 
+					</li>
+					<li>
+						Two people work on implementing custom shading
+					</li>
+				</ul>
+			</li>
+			<li>
+				Week 2: 4 - 10
+				<ul>
+					<li>
+						August 4: Graded Milestone
+					</li>
+					<li>
+						Merge the work from two teams
+					</li>
+					<li>
+						Enable additional functionality: selecting between different shaders, more flexible user input
+					</li>
+				</ul>
+			</li>
+			<li>
+				Week 3: 11 - 16
+				<ul>
+					<li>
+						August 12: Final Deliverable
+					</li>
+					<li>
+						August 13: Final Presentation
+					</li>
+					<li>
+						August 14: Peer Reviews 
+					</li>
+				</ul>
+			</li>
+		</ul>
+
+		<h2 class="section">Resources</h2>
+		<ul>
+			<li>
+				Inspirational projects:
+				<ul>
+					<li>
+						<a href="https://github.com/oatmealproblem/paint-a-galaxy/">Paint a Galaxy</a>
+					</li>
+					<li>
+						<a href="https://github.com/dgreenheck/threejs-procedural-planets#">ThreeJS Procedural Planets</a>
+					</li>
+					<li>
+						<a href="https://github.com/ericafk0001/threejs-procedral-galaxy#">ThreeJS procedural galaxy</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				Intended tech stack:
+				<ul>
+					<li>
+						ThreeJS for real-time render
+					</li>
+					<li>
+						GLSL for shaders 
+					</li>
+				</ul>
+			</li>
+		</ul>
+		</div>
+	</body>
+</html>
